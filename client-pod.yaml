@@ -2,7 +2,8 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: client-pod
-  labels: component:web
+  labels:
+    component: web
 spec:
   containers:
     - name: client
