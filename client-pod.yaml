@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
     - name: client
-      image: wjn1/fibonacci-calculator-client
+      image: wjn1/fibonacci-calculator-worker
       ports:
         - containerPort: 3000
