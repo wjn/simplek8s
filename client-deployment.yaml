@@ -24,6 +24,6 @@ spec:
     spec:
       containers:
         - name: client-deployment
-          image: stephengrider/multi-client
+          image: wjn1/fibonacci-caluclator-client
           ports:
             - containerPort: 3000
