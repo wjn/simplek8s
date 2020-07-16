@@ -1,12 +1,22 @@
+# Define an object type (Deployment) that is available in the `apps/v1` api
 apiVersion: apps/v1
 kind: Deployment
+# name the object created
 metadata:
   name: client-deployment
+
 spec:
+  # specify the number of different pods that this Deployment will make using
+  # the template defined below.
   replicas: 1
+  # after Deplooyment creates pod via the K8s Manager (master) it will use the
+  # matchLabels.component to refer to the pods that are created with the
+  # template.metadata.labels.component key below.
   selector:
     matchLabels:
       component: web
+  ## configuration for every single pod created and maintained within
+  # this Depoyment.
   template:
     metadata:
       labels:
